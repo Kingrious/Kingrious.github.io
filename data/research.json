@@ -1,0 +1,36 @@
+{
+  "research": [
+    {
+      "id": 1,
+      "title": "基于深度学习的网络入侵检测",
+      "description": "探索利用深度学习新技术对网络入侵进行识别",
+      "status": "进行中",
+      "startDate": "2025-12",
+      "tags": ["网络入侵检测", "深度学习", "卷积神经网络"],
+      "progress": 80,
+      "publications": [
+        "CCF-B 会议RAID投稿中"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "待定",
+      "description": "研究将NeRF/3DGS等神经渲染技术移植到Web环境的技术路线，重点解决性能与内存占用的平衡问题。",
+      "status": "规划中",
+      "startDate": "2024-09",
+      "tags": ["神经渲染", "NeRF", "WebGL", "性能优化"],
+      "progress": 10,
+      "publications": []
+    },
+    {
+      "id": 3,
+      "title": "待定",
+      "description": "结合生成式AI与数据可视化，探索自动生成美观、有效的数据展示方案的系统。",
+      "status": "规划中",
+      "startDate": "2025-06",
+      "tags": ["生成式AI", "数据可视化", "自动化设计"],
+      "progress": 10,
+      "publications": []
+    }
+  ]
+}

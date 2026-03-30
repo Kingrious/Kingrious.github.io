@@ -1,0 +1,13 @@
+{
+  "name": "杨天成",
+  "title": "全栈工程师\n深度学习工程师\nAI AGENT工程师\n前沿技术探索者",
+  "Birth_Date": "2003-08-22",
+  "hometown": "江苏 南京",
+  "status": "硕士研究生 - 上海工程技术大学",
+  "bio": "热衷于探索前沿技术，专注于构建具有未来感的数字体验。擅长将艺术与代码融合，创造独特且稳定的应用,给使用者带来前所未有的操作体验和视觉冲击。",
+  "skills": ["Next.js", "React", "TypeScript", "JavaScript", "Node.js","Python","Java","Vue","SpringBoot","Langchain","AI AGENT","AI Coding","OpenClaw"],
+  "social": {
+    "github": "https://github.com/Kingrious",
+    "email": "15251893636@163.com"
+  }
+}

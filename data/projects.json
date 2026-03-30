@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "优巢云物联网平台",
+      "description": "优巢云平台是创新性的智能建筑解决方案，集成物联网，云计算等技术，该系统旨在降低能耗的同时为用户提供更加安全、高效、舒适、便捷的居住环境。该平台主要负责监控全国各地设备的实时情况与动态,便于相关人员第一时间远距离掌握用户家居设备信息,方便技术人员远程调试,同时允许用户和管理员在各自终端进行远距离设备和智能家居的启用关停,为用户打造全屋跨设备智能的体验",
+      "techStack": ["Spring Cloud","Spring Boot","Vue","JavaScript","Mysql","Redis","MybatisPlus"],
+      "status": "活跃",
+      "link": "http://younenyun.com/login",
+      "highlights": [
+        "开发用户操作点位的权限以确保用户只能在规定位置操作",
+        "基于Mysql进行数据库优化，表结构设计",
+        "基于Vue2框架，开发项目关联用户增删改功能"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "智学平台",
+      "description": "智学平台是一个专门针对成人职业技能教育的网络课堂系统，网站提供了成人职业技能培训的相关课程，如:软件开发培训、职业资格证书培训、成人学历教育培训等课程。项目基于B2B2C的业务模式，培训机构可以在平台入驻、发布课程，运营人员对发布的课程进行审核，审核通过后课程才可以发布成功，课程包括免费和收费两种形式，对于免费课程可以直接选课学习，对于收费课程在选课后需要支付成功才可以继续学习。",
+      "techStack": ["SpringBoot","Spring Security","MySQL","MongoDB","Redis","ElasticSearch","Nacos","Mybatis"],
+      "status": "已完成",
+      "link": "https://github.com/Kingrious/ZhiXue-plus-project",
+      "highlights": [
+        "完成订单支付-仓库检测库存逻辑",
+        "通过断点续传保证上传业务稳定",
+        "完成账户登录与支付相关安全认证"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "SPC控制过程系统",
+      "description": "本系统是面向半导体行业研发的工业级SPC平台，以高稳定性为核心。它能够实时采集并分析流水线生产数据，通过直观的图形化报表展示制程健康度。系统充分考虑了现场运维需求，维护人员可便捷地进行数据配置与参数设定。依托内置的智能监控引擎，系统能在发生质量波动时自动向责任人推送预警，从而有效拦截异常，持续推动工业制造良率的提升。",
+      "techStack": ["Spring Boot","Vue", "Nacos", "Mysql", "Spring Data JPA", "Redis"],
+      "status": "已完成",
+      "link": "https://github.com/yangtiancheng/holo-dashboard",
+      "highlights": [
+        "从零搭建完整项目架构方便后续同事开发",
+        "完成半导体相关信息设置前后端+数据库",
+        "使用E-Chart根据数据绘图展示",
+        "根据设置规则判异进行邮箱预警",
+        "进行数据库和表结构设计,便于开发解耦",
+        "开发外部API接口方便统一传输数据"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Winner智能助手",
+      "description": "面向所有企业开发的通用大语言模型知识库系统,方便企业可以本地内网部署属于自己的垂直领域的知识库,使用大语言模型的能力为企业生产提高效率。",
+      "techStack": ["Langchain","LLM", "Rag","Agent","Vue", "Java"],
+      "status": "进行中",
+      "link": "https://github.com/yangtiancheng/quantum-maze",
+      "highlights": [
+        "打造企业通用RAG索引数据库",
+        "开发前端用户交互使用页面",
+        "开发后端交互逻辑,接入大语言模型"
+      ]
+    }
+  ]
+}
