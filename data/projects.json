@@ -32,7 +32,7 @@
       "description": "本系统是面向半导体行业研发的工业级SPC平台，以高稳定性为核心。它能够实时采集并分析流水线生产数据，通过直观的图形化报表展示制程健康度。系统充分考虑了现场运维需求，维护人员可便捷地进行数据配置与参数设定。依托内置的智能监控引擎，系统能在发生质量波动时自动向责任人推送预警，从而有效拦截异常，持续推动工业制造良率的提升。",
       "techStack": ["Spring Boot","Vue", "Nacos", "Mysql", "Spring Data JPA", "Redis"],
       "status": "已完成",
-      "link": "https://github.com/yangtiancheng/holo-dashboard",
+      "link": "https://github.com/Kingrious/SPC_SYSTEM",
       "highlights": [
         "从零搭建完整项目架构方便后续同事开发",
         "完成半导体相关信息设置前后端+数据库",
