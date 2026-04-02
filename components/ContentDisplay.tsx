@@ -32,7 +32,7 @@ export default function ContentDisplay({ activeSection }: ContentDisplayProps) {
           animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
           exit={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="pointer-events-auto max-w-[80vw] md:max-w-[70vw] lg:max-w-[65vw] mr-8 lg:mr-16"
+          className="pointer-events-auto max-w-[95vw] md:max-w-[85vw] lg:max-w-[70vw] xl:max-w-[65vw] mr-0 md:mr-[300px] lg:mr-[420px] xl:mr-[440px] max-h-[calc(100vh-var(--nav-height-mobile)-40px)] md:max-h-[calc(100vh-40px)] overflow-y-auto no-scrollbar pb-[var(--nav-height-mobile)] md:pb-0"
         >
           {renderContent()}
         </motion.div>

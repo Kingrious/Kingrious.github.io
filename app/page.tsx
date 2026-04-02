@@ -47,8 +47,8 @@ export default function Home() {
         <Navigation onNavigate={handleNavigate} activeSection={activeSection || ''} />
       </div>
 
-      {/* Decorative corner elements */}
-      <div className="fixed top-4 left-4 z-20 pointer-events-none">
+      {/* Decorative corner elements - 桌面端显示 */}
+      <div className="fixed top-4 left-4 z-20 pointer-events-none hidden md:block">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-cyber-blue animate-pulse" />
           <span className="font-mono text-xs text-cyber-blue">SYS_ONLINE</span>
@@ -58,8 +58,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom left info */}
-      <div className="fixed bottom-4 left-4 z-20 pointer-events-none">
+      {/* Bottom left info - 桌面端显示 */}
+      <div className="fixed bottom-4 left-4 z-20 pointer-events-none hidden md:block">
         <div className="font-mono text-xs text-gray-600">
           <span className="text-cyber-blue">COORD:</span>
           <span className="ml-1">X:{mouseCoord.x} Y:{mouseCoord.y}</span>

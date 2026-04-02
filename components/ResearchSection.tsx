@@ -5,27 +5,41 @@ import researchData from '@/data/research.json'
 
 export default function ResearchSection() {
   return (
-    <div className="w-full max-w-4xl px-8">
+    <div className="w-full max-w-full md:max-w-4xl px-4 md:px-8">
       {/* Section header */}
       <motion.div
-        className="text-center mb-8"
+        className="text-center mb-6 md:mb-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h2 className="font-tech text-3xl text-white mb-2 tracking-wider">
+        <h2 className="font-tech text-2xl md:text-3xl text-white mb-2 tracking-wider">
           RESEARCH<span className="text-cyber-green">_TIMELINE</span>
         </h2>
-        <div className="w-48 h-px bg-gradient-to-r from-transparent via-cyber-green to-transparent mx-auto" />
+        <div className="w-32 md:w-48 h-px bg-gradient-to-r from-transparent via-cyber-green to-transparent mx-auto" />
       </motion.div>
 
       {/* Timeline container */}
       <div className="relative">
-        {/* Main timeline line - adjusted for right offset */}
-        <div className="absolute left-12 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyber-blue via-cyber-green to-cyber-pink" />
+        {/* Main timeline line - hidden on mobile, visible on md+ */}
+        <div className="hidden md:block absolute left-12 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyber-blue via-cyber-green to-cyber-pink" />
         
-        {/* Energy flow effect */}
+        {/* Mobile timeline line - thinner, left edge */}
+        <div className="md:hidden absolute left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyber-blue via-cyber-green to-cyber-pink" />
+        
+        {/* Energy flow effect - hidden on mobile */}
         <motion.div
-          className="absolute left-12 top-0 w-0.5 h-full -translate-x-1/2"
+          className="hidden md:block absolute left-12 top-0 w-0.5 h-full -translate-x-1/2"
+          style={{
+            background: 'linear-gradient(180deg, transparent 0%, #00ff88 50%, transparent 100%)',
+            backgroundSize: '100% 200%',
+          }}
+          animate={{ backgroundPosition: ['0% -100%', '0% 100%'] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+        />
+
+        {/* Mobile energy flow effect */}
+        <motion.div
+          className="md:hidden absolute left-3 top-0 w-0.5 h-full -translate-x-1/2"
           style={{
             background: 'linear-gradient(180deg, transparent 0%, #00ff88 50%, transparent 100%)',
             backgroundSize: '100% 200%',
@@ -35,18 +49,18 @@ export default function ResearchSection() {
         />
 
         {/* Research items */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {researchData.research.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="relative pl-24"
+              className="relative pl-10 md:pl-24"
             >
-              {/* Timeline node */}
+              {/* Timeline node - smaller on mobile */}
               <motion.div
-                className="absolute left-10 w-5 h-5 rounded-full border-2 border-cyber-green z-10"
+                className="absolute left-1 md:left-10 w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-cyber-green z-10"
                 style={{ 
                   backgroundColor: 
                     item.status === '进行中' ? '#00ff88' : 
@@ -69,8 +83,8 @@ export default function ResearchSection() {
                 />
               </motion.div>
 
-              {/* Connector line */}
-              <div className="absolute left-[4.5rem] top-8 w-4 h-0.5 bg-cyber-green/50" />
+              {/* Connector line - hidden on mobile */}
+              <div className="hidden md:block absolute left-[4.5rem] top-8 w-4 h-0.5 bg-cyber-green/50" />
 
               {/* Card */}
               <div className="relative group">
@@ -87,15 +101,15 @@ export default function ResearchSection() {
                     />
                   </div>
 
-                  <div className="p-5">
+                  <div className="p-3 md:p-5">
                     {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <span className="text-cyber-blue text-xs font-mono">{item.startDate}</span>
-                        <h3 className="font-tech text-lg text-white mt-1">{item.title}</h3>
+                    <div className="flex items-start justify-between mb-3 md:mb-4 gap-2">
+                      <div className="flex-1 min-w-0">
+                        <span className="text-cyber-blue text-[10px] md:text-xs font-mono">{item.startDate}</span>
+                        <h3 className="font-tech text-base md:text-lg text-white mt-1 truncate">{item.title}</h3>
                       </div>
                       <span className={`
-                        px-2 py-1 text-xs font-mono rounded border
+                        px-1.5 md:px-2 py-0.5 md:py-1 text-[10px] md:text-xs font-mono rounded border flex-shrink-0
                         ${item.status === '进行中' ? 'bg-cyber-green/20 text-cyber-green border-cyber-green/30' : ''}
                         ${item.status === '规划中' ? 'bg-cyber-blue/20 text-cyber-blue border-cyber-blue/30' : ''}
                       `}>
@@ -104,17 +118,17 @@ export default function ResearchSection() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm font-mono leading-relaxed mb-4">
+                    <p className="text-gray-400 text-xs md:text-sm font-mono leading-relaxed mb-3 md:mb-4">
                       {item.description}
                     </p>
 
                     {/* Progress bar */}
-                    <div className="mb-4">
-                      <div className="flex justify-between text-xs font-mono mb-1">
+                    <div className="mb-3 md:mb-4">
+                      <div className="flex justify-between text-[10px] md:text-xs font-mono mb-1">
                         <span className="text-cyber-green">PROGRESS</span>
                         <span className="text-white">{item.progress}%</span>
                       </div>
-                      <div className="h-2 bg-cyber-dark rounded-full overflow-hidden border border-cyber-green/20">
+                      <div className="h-1.5 md:h-2 bg-cyber-dark rounded-full overflow-hidden border border-cyber-green/20">
                         <motion.div
                           className="h-full bg-gradient-to-r from-cyber-blue to-cyber-green rounded-full"
                           initial={{ width: 0 }}
@@ -125,14 +139,14 @@ export default function ResearchSection() {
                     </div>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
                       {item.tags.map((tag, i) => (
                         <motion.span
                           key={tag}
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.3 + i * 0.1 }}
-                          className="px-2 py-1 text-xs font-mono bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded"
+                          className="px-1.5 md:px-2 py-0.5 md:py-1 text-[10px] md:text-xs font-mono bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded"
                         >
                           {tag}
                         </motion.span>
@@ -141,16 +155,16 @@ export default function ResearchSection() {
 
                     {/* Publications */}
                     {item.publications.length > 0 && (
-                      <div className="pt-4 border-t border-cyber-green/20">
-                        <span className="text-cyber-pink text-xs font-mono">PUBLICATIONS</span>
-                        <ul className="mt-2 space-y-1">
+                      <div className="pt-3 md:pt-4 border-t border-cyber-green/20">
+                        <span className="text-cyber-pink text-[10px] md:text-xs font-mono">PUBLICATIONS</span>
+                        <ul className="mt-1.5 md:mt-2 space-y-1">
                           {item.publications.map((pub, i) => (
                             <li
                               key={i}
-                              className="text-xs font-mono text-gray-300 flex items-center gap-2"
+                              className="text-[10px] md:text-xs font-mono text-gray-300 flex items-start gap-2"
                             >
-                              <span className="text-cyber-pink">◆</span>
-                              {pub}
+                              <span className="text-cyber-pink flex-shrink-0 mt-0.5">◆</span>
+                              <span className="break-words">{pub}</span>
                             </li>
                           ))}
                         </ul>
@@ -159,10 +173,10 @@ export default function ResearchSection() {
                   </div>
 
                   {/* Corner decorations */}
-                  <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-cyber-green/40" />
-                  <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-cyber-green/40" />
-                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-cyber-blue/40" />
-                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-cyber-blue/40" />
+                  <div className="absolute top-0 left-0 w-2 md:w-3 h-2 md:h-3 border-t border-l border-cyber-green/40" />
+                  <div className="absolute top-0 right-0 w-2 md:w-3 h-2 md:h-3 border-t border-r border-cyber-green/40" />
+                  <div className="absolute bottom-0 left-0 w-2 md:w-3 h-2 md:h-3 border-b border-l border-cyber-blue/40" />
+                  <div className="absolute bottom-0 right-0 w-2 md:w-3 h-2 md:h-3 border-b border-r border-cyber-blue/40" />
                 </div>
               </div>
             </motion.div>

@@ -23,12 +23,38 @@
   background: rgba(0, 212, 255, 0.6);
 }
 
+/* 内容区域滚动条 - 更窄更透明 */
+.content-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 2px;
+}
+
+.content-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 255, 0.5);
+}
+
 :root {
   --cyber-black: #0a0a0f;
   --cyber-dark: #0d1117;
   --cyber-blue: #00d4ff;
   --cyber-pink: #ff00ff;
   --cyber-green: #00ff88;
+  --nav-height-mobile: 70px;  /* 移动端底部导航栏高度 */
+  --nav-height-desktop: 0px;  /* 桌面端导航不占据底部空间 */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nav-height-mobile: 0px;
+  }
 }
 
 * {

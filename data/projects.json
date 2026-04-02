@@ -48,7 +48,7 @@
       "description": "面向所有企业开发的通用大语言模型知识库系统,方便企业可以本地内网部署属于自己的垂直领域的知识库,使用大语言模型的能力为企业生产提高效率。",
       "techStack": ["Langchain","LLM", "Rag","Agent","Vue", "Java"],
       "status": "进行中",
-      "link": "https://github.com/yangtiancheng/quantum-maze",
+      "link": "https://gitee.com/algernon_null/sues-winner-agent",
       "highlights": [
         "打造企业通用RAG索引数据库",
         "开发前端用户交互使用页面",

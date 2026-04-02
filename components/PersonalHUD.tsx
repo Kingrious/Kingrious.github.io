@@ -9,7 +9,7 @@ export default function PersonalHUD() {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="fixed top-6 right-6 z-20 max-w-sm"
+      className="fixed top-6 right-6 z-20 max-w-sm hidden md:block md:max-w-[280px] md:top-4 md:right-4 lg:max-w-sm lg:top-6 lg:right-6 md:bottom-[160px] lg:bottom-[170px]"
     >
       <div className="relative">
         {/* Glow effect behind */}
@@ -33,7 +33,7 @@ export default function PersonalHUD() {
           </div>
 
           {/* Content */}
-          <div className="p-5">
+          <div className="p-5 md:p-4 lg:p-5">
             {/* Header with animated line */}
             <div className="flex items-center gap-3 mb-4">
               <motion.div
@@ -46,7 +46,7 @@ export default function PersonalHUD() {
             </div>
 
             {/* Name */}
-            <h2 className="font-tech text-2xl font-bold text-white mb-1 tracking-wide">
+            <h2 className="font-tech text-2xl md:text-xl lg:text-2xl font-bold text-white mb-1 tracking-wide">
               {bioData.name}
             </h2>
             {/* Title - 每2个换行 */}
@@ -75,14 +75,14 @@ export default function PersonalHUD() {
             </div>
 
             {/* Bio */}
-            <p className="mt-4 text-gray-400 text-xs font-mono leading-relaxed">
+            <p className="mt-4 text-gray-400 text-xs font-mono leading-relaxed md:line-clamp-2 lg:line-clamp-none">
               {bioData.bio}
             </p>
 
             {/* Skills */}
             <div className="mt-4">
               <span className="text-cyber-pink text-xs font-mono">SKILLS</span>
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex flex-wrap gap-2 mt-2 max-h-[180px] md:max-h-[120px] lg:max-h-[200px] overflow-y-auto content-scrollbar">
                 {bioData.skills.map((skill, index) => (
                   <motion.span
                     key={skill}
