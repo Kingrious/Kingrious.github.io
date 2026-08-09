@@ -135,6 +135,22 @@ export default function ProjectsSection() {
                         </motion.li>
                       ))}
                     </ul>
+                    {project.work && project.work.length > 0 && (
+                      <>
+                        <span className="mt-3 block text-cyber-pink text-xs font-mono">本人工作内容</span>
+                        <ul className="mt-2 space-y-1 max-h-28 md:max-h-36 overflow-y-auto custom-scrollbar pr-1">
+                          {project.work.map((item, i) => (
+                            <li
+                              key={i}
+                              className="text-xs font-mono text-gray-400 flex items-start gap-2"
+                            >
+                              <span className="text-cyber-pink mt-0.5">▹</span>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
                     <a
                       href={project.link}
                       target="_blank"
