@@ -67,7 +67,7 @@ export default function HomeSection() {
         transition={{ duration: 0.6, delay: 0.15 }}
         className="mb-6"
       >
-        <p className="text-[var(--text-secondary)] leading-relaxed text-lg">
+        <p className="text-[var(--text-secondary)] leading-relaxed text-lg whitespace-pre-line">
           {bioData.bio}
         </p>
       </motion.div>
