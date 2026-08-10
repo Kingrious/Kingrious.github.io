@@ -19,16 +19,6 @@
       "tags": ["计算机网络", "Mininet", "P4"],
       "progress": 80,
       "publications": []
-    },
-    {
-      "id": 3,
-      "title": "嵌入式STM32+MCU+FreeRTOS的学习",
-      "description": "初级阶段",
-      "status": "进行中",
-      "startDate": "2026-07",
-      "tags": ["嵌入式", "FreeRTOS", "STM32"],
-      "progress": 70,
-      "publications": []
     }
   ]
 }
