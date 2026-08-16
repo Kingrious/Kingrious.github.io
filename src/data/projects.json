@@ -44,7 +44,7 @@
       "id": 3,
       "name": "企业岗位经验 Skill 生成平台",
       "description": "设计并开发了一套基于大语言模型的企业岗位经验 Skill 生成平台，支持业务人员通过自然语言一键生成结构化的岗位分析 Skill。平台采用“确定性计算 + LLM 推理”混合调度执行引擎，对 CSV / 粘贴数据自动完成编码识别、字段校验、指标计算与 AI 归因分析，输出标注数据来源的标准 Markdown 报告，实现岗位经验的数字化沉淀、复用与溯源",
-      "techStack": ["Node.js、DeepSeek 大模型 API、JavaScript、HTML、CSS、JSON"],
+      "techStack": ["Node.js","DeepSeek 大模型 API","JavaScript","HTML","CSS","JSON"],
       "status": "已完成",
       "link": "https://github.com/Kingrious/SkillsMaker",
       "highlights": [
