@@ -12,12 +12,22 @@
     },
     {
       "id": 2,
-      "title": "基于P4的新型网络架构",
+      "title": "P4网络架构",
       "description": "提出新理念NaaG的网络架构，结合P4语言实现高性能网络数据包处理",
       "status": "进行中",
       "startDate": "2026-06",
       "tags": ["计算机网络", "Mininet", "P4"],
       "progress": 80,
+      "publications": []
+    },
+     {
+      "id": 3,
+      "title": "基于FreeRTOS的新型P4网络架构",
+      "description": "一种基于FreeROTS内核理念优化的P4网络架构",
+      "status": "进行中",
+      "startDate": "2026-08",
+      "tags": ["FreeRTOS","计算机网络", "Mininet", "P4"],
+      "progress": 20,
       "publications": []
     }
   ]
